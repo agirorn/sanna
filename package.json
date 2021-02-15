@@ -1,6 +1,6 @@
 {
   "name": "sanna",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "description": "Productivity focused testing for node.js",
   "license": "MIT",
@@ -24,8 +24,8 @@
     "current-line": "^1.0.1",
     "execa": "^5.0.0",
     "invert-promise": "^1.0.1",
-    "standard": "*",
-    "sanna": "../sanna"
+    "sanna": "../sanna",
+    "standard": "*"
   },
   "dependencies": {
     "c8": "^7.5.0",
