@@ -1,17 +1,21 @@
 {
-  "name": "test-it",
+  "name": "sanna",
   "version": "0.0.0",
   "main": "lib/index.js",
-  "description": "Productivity fcused testing for node.js",
+  "description": "Productivity focused testing for node.js",
   "license": "MIT",
+  "bugs": "https://github.com/agirorn/sanna/issues",
+  "repository": "git://github.com/agirorn/sanna.git",
+  "homepage": "https://github.com/agirorn/sanna#readme",
+  "author": "Ægir Örn Símonarson <agirorn@gmail.com>",
   "bin": {
-    "test-it": "./bin/test-it.js"
+    "sanna": "./bin/sanna.js"
   },
   "scripts": {
     "lint": "eslint bin lib tests examples",
-    "test:copy": "yarn test-it tests",
-    "test": "./bin/test-it.js tests",
-    "coverage": "c8 --reporter text-summary --reporter html ./bin/test-it.js tests",
+    "test:copy": "yarn sanna tests",
+    "test": "./bin/sanna.js tests",
+    "coverage": "c8 --reporter text-summary --reporter html ./bin/sanna.js tests",
     "dev": "yardman .eslintrc.js package.json bin lib tests examples 'yarn dev:exec'",
     "dev:exec": "clear && time yarn --silent test && yarn lint && clear && time yarn coverage"
   },
@@ -21,7 +25,7 @@
     "execa": "^5.0.0",
     "invert-promise": "^1.0.1",
     "standard": "*",
-    "test-it": "../test-it"
+    "sanna": "../sanna"
   },
   "dependencies": {
     "c8": "^7.5.0",
@@ -48,7 +52,7 @@
     "runner",
     "tdd",
     "test",
-    "test-it",
+    "sanna",
     "testing",
     "unit"
   ]

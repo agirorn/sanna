@@ -1,6 +1,6 @@
-# test-it
+# sanna
 
-> test-it is an opinionated testing framework for node.js focused developer
+> Sanna is an opinionated testing framework for node.js focused developer
 > productivity and easy of use
 
 It works with any assertion library that throws and [AssertionError] from built
@@ -11,7 +11,7 @@ The API [Documention](./docs)
 ## Installation
 
 ```shell
-  npm install test-it
+  npm install sanna
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ The API [Documention](./docs)
 In a tests file **tests/first.test.js**
 
 ```shell
-const { suite, test } = require('test-it');
+const { suite, test } = require('sanna');
 const assert = require('assert')
 
 const s = suite('True values')
@@ -46,11 +46,11 @@ s('Home maied assertion testing if a value is true', () => {
 
 Running tests can be done in 2 ways.
 
-1. By running the test-it executable installed by the module it by default looks
+1. By running the sanna executable installed by the module it by default looks
    for `*.test.js` files in the tests folder.
 
 ```shell
-test-it tests/first.test.js
+sanna tests/first.test.js
 ```
 
 2. run the tests files directly with node.js mostly useful for running an single
@@ -64,7 +64,7 @@ node tests/first.test.js
 
 Print out progress dots and success stats.
 
-$ test-it tests/test.js
+$ sanna tests/test.js
 ....
 
   4 tests passed
@@ -79,7 +79,7 @@ Prints out a nifty error report include
 - Failed/Pass stats
 
 ```shell
-$ test-it tests/first.test.js
+$ sanna tests/first.test.js
 
 Suite Name
   x test text
@@ -103,6 +103,12 @@ Suite Name
   3 tests passed
   1 tests failed
 ```
+
+## The name sanna
+
+> sýna fram á e-ð, sýna að e-ð sé satt, styðja óhrekjandi rökum
+
+It is the Icelandic name of proving or is true or correct without a doubt.
 
 [assert]: https://nodejs.org/api/assert.html
 [AssertionError]: https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options

@@ -19,7 +19,7 @@ const runToFailure = async (cmd) => {
 
 const test = suite('Not test found');
 [
-  './bin/test-it.js',
+  './bin/sanna.js',
   'node ./tests/fixture/has-has-no-tests.test.js',
 ].forEach((cmd) => {
   test('exits with 1', async () => {
