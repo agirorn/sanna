@@ -1,0 +1,55 @@
+{
+  "name": "test-it",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "description": "Productivity fcused testing for node.js",
+  "license": "MIT",
+  "bin": {
+    "test-it": "./bin/test-it.js"
+  },
+  "scripts": {
+    "lint": "eslint bin lib tests examples",
+    "test:copy": "yarn test-it tests",
+    "test": "./bin/test-it.js tests",
+    "coverage": "c8 --reporter text-summary --reporter html ./bin/test-it.js tests",
+    "dev": "yardman .eslintrc.js package.json bin lib tests examples 'yarn dev:exec'",
+    "dev:exec": "clear && time yarn --silent test && yarn lint && clear && time yarn coverage"
+  },
+  "devDependencies": {
+    "check-types": "^11.1.2",
+    "current-line": "^1.0.1",
+    "execa": "^5.0.0",
+    "invert-promise": "^1.0.1",
+    "standard": "*",
+    "test-it": "../test-it"
+  },
+  "dependencies": {
+    "c8": "^7.5.0",
+    "chalk": "^4.1.0",
+    "cli-highlight": "^2.1.10",
+    "concordance": "^5.0.1",
+    "diff": "^5.0.0",
+    "minimist": "^1.2.5",
+    "p-series": "^2.1.0",
+    "partial-compare": "^1.0.1",
+    "ramda": "^0.27.1",
+    "readdirp": "^3.5.0"
+  },
+  "keywords": [
+    "assert",
+    "assertion",
+    "async",
+    "bdd",
+    "cli",
+    "cli-app",
+    "concurrent",
+    "expect",
+    "fast",
+    "runner",
+    "tdd",
+    "test",
+    "test-it",
+    "testing",
+    "unit"
+  ]
+}
