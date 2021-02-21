@@ -1,3 +1,6 @@
+[![npm version][npm-badge]][npm-link]
+[![Build Status][travis-badge]][travis-link]
+
 # sanna
 
 > Sanna is an opinionated testing framework for node.js focused developer
@@ -112,3 +115,8 @@ It is the Icelandic name of proving or is true or correct without a doubt.
 
 [assert]: https://nodejs.org/api/assert.html
 [AssertionError]: https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
+
+[npm-badge]: https://badge.fury.io/js/sanna.svg
+[npm-link]: https://badge.fury.io/js/sanna
+[travis-badge]: https://travis-ci.org/agirorn/sanna.svg?branch=master
+[travis-link]: https://travis-ci.org/agirorn/sanna
