@@ -1,6 +1,6 @@
 {
   "name": "sanna",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "description": "Productivity focused testing for node.js",
   "license": "MIT",
