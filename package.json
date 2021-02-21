@@ -19,6 +19,10 @@
     "dev": "yardman .eslintrc.js package.json bin lib tests examples 'yarn dev:exec'",
     "dev:exec": "clear && time yarn --silent test && yarn lint && clear && time yarn coverage"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "devDependencies": {
     "check-types": "^11.1.2",
     "current-line": "^1.0.1",
