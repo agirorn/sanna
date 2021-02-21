@@ -12,6 +12,7 @@
     "sanna": "./bin/sanna.js"
   },
   "scripts": {
+    "ci": "yarn coverage && yarn lint",
     "lint": "eslint bin lib tests examples",
     "test:copy": "yarn sanna tests",
     "test": "./bin/sanna.js tests",
