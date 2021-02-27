@@ -16,11 +16,12 @@
     "lint": "eslint bin lib tests examples",
     "test:copy": "yarn sanna tests",
     "test": "./bin/sanna.js tests",
-    "coverage": "c8 --reporter text-summary --reporter html ./bin/sanna.js tests",
-    "dev": "yardman .eslintrc.js package.json bin lib tests examples 'yarn dev:exec'",
-    "dev:exec": "clear && time yarn --silent test && yarn lint && clear && time yarn coverage"
+    "coverage": "magic-carpet",
+    "dev": "magic-carpet",
+    "dev:exec": "magic-carpet"
   },
   "files": [
+    "index.d.ts",
     "bin",
     "lib"
   ],
@@ -29,10 +30,12 @@
     "current-line": "^1.0.1",
     "execa": "^5.0.0",
     "invert-promise": "^1.0.1",
+    "magic-carpet": "^0.0.2",
     "sanna": "../sanna",
     "standard": "*"
   },
   "dependencies": {
+    "@types/node": "^14.14.31",
     "c8": "^7.5.0",
     "chalk": "^4.1.0",
     "cli-highlight": "^2.1.10",
@@ -42,7 +45,9 @@
     "p-series": "^2.1.0",
     "partial-compare": "^1.0.1",
     "ramda": "^0.27.1",
-    "readdirp": "^3.5.0"
+    "readdirp": "^3.5.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.0"
   },
   "keywords": [
     "assert",

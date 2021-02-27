@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// require('typescript-require');
+require('ts-node').register({ /* options */ });
 const { resolve } = require('path');
 const { fstatSync, openSync } = require('fs');
 const { red } = require('chalk');
