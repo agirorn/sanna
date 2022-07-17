@@ -1,5 +1,34 @@
 # TODO
 
+## Check if the diff output is reversed
+
+```js
+const test = suite('deepStrictEqual');
+test('Create game', async () => {
+  assert.deepStrictEqual(
+    [{
+      name: 'GAME_CREATED',
+    }],
+    [{
+    }]
+  )
+});
+```
+
+This should print out an error
+
+  Difference:
+
+      [
+        {
+    -     name: 'GAME_CREATED', # IN READ
+        },
+      ]
+
+
+
+
+## The code printing cuts of at around 170 lines
 ## Publish module
 ## Add ftest to focus on a single test
 ## Add xtest to disable a single test
