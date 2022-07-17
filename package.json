@@ -21,6 +21,7 @@
     "dev:exec": "magic-carpet"
   },
   "files": [
+    "README.md",
     "index.d.ts",
     "bin",
     "lib"
