@@ -9,7 +9,7 @@
 It works with any assertion library that throws and [AssertionError] from built
 in the [assert] module or an error the actual or expected values set.
 
-The API [Documention](./docs)
+The API [Documention](./docs/api.md)
 
 ## Installation
 
