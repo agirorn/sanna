@@ -26,9 +26,8 @@
   },
   "files": [
     "README.md",
-    "index.d.ts",
     "bin",
-    "lib"
+    "dist"
   ],
   "devDependencies": {
     "@types/node": "^18.11.13",
