@@ -1,11 +1,13 @@
 {
+  "exclude": [],
+  "include": ["src"],
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "sourceMap": true,
-    "declaration": true,
     "outDir": "./dist",
+    "pretty": true,
     "strict": true,
-    "types": ["node"]
+    "sourceMap": true,
+    "module": "nodenext",
+    "declaration": true,
+    "moduleResolution": "nodenext"
   }
 }

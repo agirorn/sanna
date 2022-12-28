@@ -1,14 +1,18 @@
-const { runAndExit } = require('magic-carpet');
+import { runAndExit } from 'magic-carpet';
 
 runAndExit(`
   yardman
     tsconfig.json
     index.d.ts
+    tsconfig.json
+    .eslintrc.json
     package.json
-    .eslintrc.js
     bin
     lib
+    src
     tests
+    scripts
     examples
+    /Users/agirorn/code/eslint-config-viking/dist
     'yarn dev:exec'
 `);

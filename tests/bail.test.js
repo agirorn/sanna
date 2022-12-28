@@ -1,12 +1,10 @@
-const { suite } = require('..');
-const { red } = require('chalk');
-const { runner } = require('../lib/runner');
-const assert = require('assert');
-const {
-  assertDefined,
-  assertPartial,
-} = require('./assertions');
+import { suite } from '..';
+import { red } from 'chalk';
+import { runner } from '../lib/runner';
+import assert from 'assert';
+import { assertDefined, assertPartial } from './assertions';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
 const test = suite('bada bing');
@@ -17,13 +15,10 @@ test('a sucessfull test', async () => {
     assert.ok(true);
   });
 
-  assert.deepStrictEqual(
-    await run(true, noop),
-    {
-      passed: 1,
-      failed: [],
-    }
-  );
+  assert.deepStrictEqual(await run(true, noop), {
+    passed: 1,
+    failed: [],
+  });
 });
 
 test('a failing test', async () => {
@@ -36,15 +31,14 @@ test('a failing test', async () => {
     assert(true);
   });
   const report = await run(true, noop);
-  assertPartial(
-    report,
-    {
-      passed: 0,
-      failed: [{
+  assertPartial(report, {
+    passed: 0,
+    failed: [
+      {
         title: `${red('X')} test -> test`,
-      }],
-    }
-  );
+      },
+    ],
+  });
 
   assertDefined(report.failed[0].stack);
 });
@@ -67,15 +61,14 @@ test('a failing setup', async () => {
     assert(true);
   });
   const report = await run(true, noop);
-  assertPartial(
-    report,
-    {
-      passed: 0,
-      failed: [{
+  assertPartial(report, {
+    passed: 0,
+    failed: [
+      {
         title: `${red('X')} test -> test that should not run`,
-      }],
-    }
-  );
+      },
+    ],
+  });
 
   assert.equal(report.failed.length, 1);
   assertDefined(report.failed[0].stack);
@@ -99,12 +92,9 @@ test('when bail is off failing setup', async () => {
     assert(true);
   });
   const report = await run(false, noop);
-  assertPartial(
-    report,
-    {
-      passed: 0,
-    }
-  );
+  assertPartial(report, {
+    passed: 0,
+  });
 
   assert.equal(report.failed.length, 2);
 });
@@ -119,14 +109,13 @@ test('a failing before', async () => {
     assert(true);
   });
   const report = await run(true, noop);
-  assertPartial(
-    report,
-    {
-      passed: 0,
-      failed: [{
+  assertPartial(report, {
+    passed: 0,
+    failed: [
+      {
         title: `${red('X')} test -> test that should not run`,
-      }],
-    }
-  );
+      },
+    ],
+  });
   assertDefined(report.failed[0].stack);
 });

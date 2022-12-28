@@ -1,4 +1,4 @@
-const { runAndExit } = require('magic-carpet');
+import { runAndExit } from 'magic-carpet';
 
 runAndExit(`
   c8

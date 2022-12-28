@@ -26,7 +26,7 @@ const { suite } = require('sanna');
 const assert = require('assert');
 
 c = suite('Component')
-c.test('it is true', (context) => {
+c.test('it is true', () => {
   assert.equal(true, true)
 });
 ```
@@ -35,17 +35,22 @@ c.test('it is true', (context) => {
 
 Registers a hook that is executed before all test in the suit
 
-- __hook:__ A function that is called with the test context.
+- __hook:__ A function that is called
 
 ```js
 const { suite } = require('sanna');
 const assert = require('assert');
 
 c = suite('Component')
-c.setup((context) => {
+const context = {
+  value: false;
+};
+
+c.setup(() => {
   context.value = true;
 });
-c.test('it is true', (context) => {
+
+c.test('it is true', () => {
   assert.equal(context.value, true)
 });
 ```
@@ -54,7 +59,7 @@ c.test('it is true', (context) => {
 
 Registers a hook that is executed before all test in the suit
 
-- __hook:__ A function that is called with the test context.
+- __hook:__ A function that is called
   Can be used to close databases connections for instance.
 
 ```js
@@ -62,10 +67,13 @@ const { suite } = require('sanna');
 const assert = require('assert');
 
 c = suite('Component')
-c.test('it is true', (context) => {
+const context = {
+  value: false;
+};
+c.test('it is true', () => {
   context.value = undefined
 });
-c.teardown((context) => {
+c.teardown(() => {
   assert.equal(context.value, true)
 });
 ```
@@ -74,7 +82,7 @@ c.teardown((context) => {
 
 Registers a hook that is executed before each test in the suit
 
-- __hook:__ A function that is called with the test context.
+- __hook:__ A function that is called
 
 ```js
 const { suite } = require('sanna');
@@ -93,7 +101,7 @@ c.test('it is true', (context) => {
 
 Registers a hook that is executed after each test in the suit
 
-- __hook:__ A function that is called with the test context.
+- __hook:__ A function that is called
 
 ```js
 const { sanna } = require('sanna');

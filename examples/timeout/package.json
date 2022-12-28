@@ -1,0 +1,21 @@
+{
+  "name": "timeout",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "yardman package.json src -x 'clear && yarn compile' -w dist -w package.json -x 'clear && sleep 0.3 && yarn test'",
+    "compile": "tsc --build",
+    "test2": "NODE_OPTIONS=--enable-source-maps node ./dist/all.test.js || echo 'should have failed'",
+    "test": "if NODE_OPTIONS=--enable-source-maps node ./dist/all.test.js; then echo \"should have failed becaus of the test timeingout\"; exit 1; else echo \" Worked as expected\"; fi"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.9",
+    "p-event": "^5.0.1",
+    "sanna": "../.."
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "typescript": "^4.7.4"
+  }
+}

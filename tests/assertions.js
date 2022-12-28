@@ -1,7 +1,7 @@
-const partial = require('partial-compare');
-const assert = require('assert');
+import partial from 'partial-compare';
+import assert from 'assert';
 
-const assertDefined = (actual) => {
+export const assertDefined = (actual) => {
   if (actual === undefined) {
     throw new assert.AssertionError({
       message: `The value (${actual}) should have been defined`,
@@ -11,7 +11,7 @@ const assertDefined = (actual) => {
   }
 };
 
-const assertPartial = (actual, expected) => {
+export const assertPartial = (actual, expected) => {
   if (!partial(actual, expected)) {
     throw new assert.AssertionError({
       message: 'Object dose not contain expected values',
@@ -19,9 +19,4 @@ const assertPartial = (actual, expected) => {
       actual,
     });
   }
-};
-
-module.exports = {
-  assertDefined,
-  assertPartial,
 };

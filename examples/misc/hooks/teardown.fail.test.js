@@ -1,5 +1,5 @@
-const { suite } = require('../../..');
-const assert = require('assert');
+import { suite } from '../../..';
+import assert from 'assert';
 
 const s = suite('setup should fail');
 s.teardown(() => {

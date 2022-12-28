@@ -1,5 +1,6 @@
-const { suite, test } = require('..');
-const assert = require('assert');
+// eslint-disable-next-line node/no-missing-require, node/no-missing-import
+import { suite, test } from '..';
+import assert from 'assert';
 
 const delay = (ms = 200) => new Promise((resolve) => setTimeout(resolve, ms));
 const s = suite('bada bing');
