@@ -13,6 +13,7 @@
     "sanna": "./bin/sanna.js"
   },
   "scripts": {
+    "prepublish": "yarn && yarn compile",
     "ci": "yarn coverage && yarn lint",
     "compile": "tsc --build",
     "lint": "eslint bin src scripts .eslintrc.*",
